@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { KnightComponent } from './knight/knight.component';
+import { BoardAndMovementComponent } from './board-and-movement/board-and-movement.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KnightComponent,
+    BoardAndMovementComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

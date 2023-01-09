@@ -1,0 +1,20 @@
+<div class="wrapper">
+
+      <h1>Chess By Ramaz Borchashvili</h1>
+
+      <table>
+
+        <tr *ngFor="let row of squares; let r = index">
+
+          <td *ngFor="let square of row; let z = index" (click)="moveKnight(square)" [class.highlight]="isPotentialMove(square) && displayAllknightSquares" [ngClass]="{ 'white': (r + z) % 2 === 0, 'black': (r + z) % 2 === 1 }">
+            <audio id="rightMovementSound" src="../../assets/right_movement.mp3"></audio>
+            <audio id="wrongMovementSound" src="../../assets/wrong_movement.mp3"></audio>
+              <app-knight  *ngIf="square === startLocationForKnight" (click)="ShowAllSquares()"></app-knight>           
+          </td>
+
+        </tr> 
+
+      </table>
+     
+  </div>
+  
